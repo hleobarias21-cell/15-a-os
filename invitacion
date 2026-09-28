@@ -1,1 +1,625 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mis XV Años · Alexia</title>
 
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Montserrat:wght@400;500;600;700&display=swap');
+
+:root{
+    --morado:#26052f;
+    --morado2:#4a1460;
+    --rosado:#e99ab8;
+    --dorado:#e8bd67;
+    --crema:#fff4df;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    background:#120318;
+    color:white;
+    font-family:Montserrat,Arial,sans-serif;
+}
+
+main{
+    max-width:520px;
+    margin:auto;
+    overflow:hidden;
+    background:#1b0426;
+}
+
+section{
+    position:relative;
+    padding:70px 22px;
+    overflow:hidden;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    text-align:center;
+    padding-bottom:45px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(20,2,29,.15),
+            rgba(20,2,29,.92)
+        ),
+        url("foto1.jpg") center/cover;
+}
+
+.hero h1{
+    margin:5px 0 20px;
+    font-family:"Cormorant Garamond",serif;
+    font-size:90px;
+    font-style:italic;
+    font-weight:500;
+    color:var(--dorado);
+}
+
+.hero h2{
+    font-family:"Cormorant Garamond",serif;
+    font-size:28px;
+}
+
+.quote{
+    font-family:"Cormorant Garamond",serif;
+    font-size:21px;
+    line-height:1.55;
+}
+
+.titulo{
+    text-align:center;
+}
+
+.titulo h2{
+    font-family:"Cormorant Garamond",serif;
+    font-size:44px;
+    font-style:italic;
+    color:var(--dorado);
+}
+
+.subtitulo{
+    color:var(--dorado);
+    text-transform:uppercase;
+    letter-spacing:.18em;
+    font-size:10px;
+}
+
+.detalles{
+    text-align:center;
+    background:linear-gradient(160deg,#21042f,#4a1460);
+}
+
+.tarjeta{
+    border:1px solid rgba(232,189,103,.55);
+    border-radius:25px;
+    padding:30px 20px;
+    background:rgba(255,255,255,.05);
+}
+
+.fecha{
+    font-family:"Cormorant Garamond",serif;
+    font-size:38px;
+    color:var(--dorado);
+}
+
+.hora,
+.lugar{
+    font-size:18px;
+    margin-top:10px;
+}
+
+.padres{
+    text-align:center;
+    background:
+        linear-gradient(
+            rgba(28,3,38,.8),
+            rgba(28,3,38,.94)
+        ),
+        url("foto2.jpg") center/cover;
+}
+
+.foto{
+    width:100%;
+    border-radius:22px;
+    border:1px solid rgba(232,189,103,.7);
+}
+
+.nombres{
+    font-family:"Cormorant Garamond",serif;
+    font-size:27px;
+    line-height:1.4;
+    margin:20px 0;
+}
+
+.texto{
+    line-height:1.7;
+    color:#eadbe8;
+}
+
+.vestimenta{
+    text-align:center;
+    color:#351039;
+    background:linear-gradient(160deg,#fff0dc,#f6d5dc);
+}
+
+.vestimenta h2{
+    color:#5b226d;
+}
+
+.gala{
+    display:inline-block;
+    padding:13px 28px;
+    border-radius:50px;
+    color:white;
+    background:linear-gradient(135deg,#74268d,#c77a9e);
+    font-weight:bold;
+    margin:15px;
+}
+
+.colores{
+    border-top:1px solid rgba(105,43,110,.3);
+    margin-top:20px;
+    padding-top:20px;
+    line-height:1.6;
+}
+
+.muestras{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin:15px;
+}
+
+.color{
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    border:2px solid white;
+}
+
+.rosado{background:#e99ab8}
+.dorado{background:#e8bd67}
+.morado{background:#6d2a82}
+
+.ubicacion,
+.confirmacion{
+    text-align:center;
+    background:linear-gradient(160deg,#21042f,#3b0c50);
+}
+
+.boton{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:15px 25px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+    color:white;
+    background:linear-gradient(135deg,#a94fbd,#e0a94d);
+}
+
+.whatsapp{
+    background:#25d366;
+    color:#06230e;
+}
+
+.regalo{
+    text-align:center;
+    color:#35103e;
+    background:linear-gradient(160deg,#fff1df,#f5d5df);
+}
+
+.sobre{
+    font-size:65px;
+}
+
+.galeria{
+    background:#1a0425;
+}
+
+.galeria-contenedor{
+    display:flex;
+    gap:15px;
+    overflow-x:auto;
+}
+
+.galeria img{
+    flex:0 0 86%;
+    width:86%;
+    aspect-ratio:3/4;
+    object-fit:cover;
+    border-radius:24px;
+    border:1px solid rgba(232,189,103,.65);
+}
+
+.mensaje{
+    text-align:center;
+    color:#3a123f;
+    background:linear-gradient(160deg,#f8e6d2,#fff4e4);
+}
+
+.mensaje h2{
+    color:#5b226d;
+}
+
+.mensaje-contenido{
+    font-family:"Cormorant Garamond",serif;
+    font-size:21px;
+    line-height:1.75;
+}
+
+.firma{
+    font-size:30px;
+    font-style:italic;
+    color:#6d2a82;
+}
+
+footer{
+    text-align:center;
+    padding:70px 20px;
+    background:#100219;
+}
+
+footer h2{
+    font-family:"Cormorant Garamond",serif;
+    font-size:38px;
+    font-style:italic;
+    color:var(--dorado);
+}
+</style>
+</head>
+
+<body>
+
+<main>
+
+<section class="hero">
+
+    <div>
+        <div class="subtitulo">
+            Mis XV años
+        </div>
+
+        <h1>Alexia</h1>
+
+        <p class="quote">
+            Como una mariposa que despliega sus alas,
+            hoy comienzo a volar hacia una nueva etapa.
+            Acompáñame a dar este primer paso tan especial.
+        </p>
+    </div>
+
+</section>
+
+
+<section class="detalles">
+
+    <div class="titulo">
+        <div class="subtitulo">
+            Una noche para recordar
+        </div>
+
+        <h2>Mis XV Años</h2>
+    </div>
+
+    <div class="tarjeta">
+
+        <div class="fecha">
+            7 de noviembre de 2026
+        </div>
+
+        <div class="hora">
+            5:30 p. m.
+        </div>
+
+        <div class="lugar">
+            📍 Club Árabe
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="padres">
+
+    <div class="titulo">
+
+        <div class="subtitulo">
+            Con el amor de mi familia
+        </div>
+
+        <h2>Mis padres</h2>
+
+    </div>
+
+    <img
+        class="foto"
+        src="foto2.jpg"
+        alt="Alexia"
+    >
+
+    <div class="nombres">
+
+        Tania Marcela Portillo de Hernández
+        <br>
+
+        Fredy Alexander Hernández
+
+    </div>
+
+    <p class="texto">
+
+        Con la bendición de Dios y el amor
+        de mis padres, quiero compartir contigo
+        esta noche tan especial.
+
+    </p>
+
+</section>
+
+
+<section class="vestimenta">
+
+    <div class="titulo">
+
+        <div class="subtitulo">
+            Para esta noche especial
+        </div>
+
+        <h2>Código de vestimenta</h2>
+
+    </div>
+
+    <div class="gala">
+        👑 DE GALA
+    </div>
+
+    <p>
+        Tu elegancia hará que esta noche
+        sea aún más especial.
+    </p>
+
+    <div class="colores">
+
+        <strong>
+            Código de colores
+        </strong>
+
+        <p>
+            Los colores
+            <b>
+                rosado, dorado y morado
+                son exclusivamente para
+                la quinceañera.
+            </b>
+        </p>
+
+        <div class="muestras">
+
+            <span class="color rosado"></span>
+            <span class="color dorado"></span>
+            <span class="color morado"></span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="ubicacion">
+
+    <div class="titulo">
+
+        <div class="subtitulo">
+            Nos vemos allí
+        </div>
+
+        <h2>Lugar del evento</h2>
+
+    </div>
+
+    <div class="tarjeta">
+
+        <h3>
+            📍 Club Árabe
+        </h3>
+
+        <p class="texto">
+
+            Te esperamos para vivir juntos
+            una noche mágica.
+
+        </p>
+
+        <a
+            class="boton"
+            href="https://share.google/tQAepBMofoKZZT8wg"
+            target="_blank"
+        >
+            📍 VER UBICACIÓN
+        </a>
+
+    </div>
+
+</section>
+
+
+<section class="confirmacion">
+
+    <div class="titulo">
+
+        <div class="subtitulo">
+            Tu presencia es muy importante
+        </div>
+
+        <h2>¿Nos acompañas?</h2>
+
+    </div>
+
+    <div class="tarjeta">
+
+        <p class="texto">
+
+            Confirma tu asistencia antes
+            del <b>30 de octubre</b>.
+
+        </p>
+
+        <a
+            class="boton whatsapp"
+            href="https://wa.me/50376310646?text=Hola,%20confirmo%20mi%20asistencia%20a%20los%20XV%20a%C3%B1os%20de%20Alexia.%0A%0AN%C3%BAmero%20de%20acompa%C3%B1antes:"
+            target="_blank"
+        >
+            💬 CONFIRMAR ASISTENCIA
+        </a>
+
+        <p class="texto">
+            No olvides indicar el número
+            de acompañantes.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="regalo">
+
+    <div class="titulo">
+
+        <div class="subtitulo">
+            Una muestra de cariño
+        </div>
+
+        <h2>Regalo de sobre</h2>
+
+    </div>
+
+    <div class="sobre">
+        💌
+    </div>
+
+    <p>
+        Tu presencia es nuestro mejor regalo.
+    </p>
+
+    <p>
+        Si deseas obsequiarme algo,
+        agradeceré mucho un
+        <b>regalo de sobre</b>.
+    </p>
+
+</section>
+
+
+<section class="galeria">
+
+    <div class="titulo">
+
+        <div class="subtitulo">
+            Recuerdos que quedan para siempre
+        </div>
+
+        <h2>Momentos de Alexia</h2>
+
+    </div>
+
+    <div class="galeria-contenedor">
+
+        <img src="foto1.jpg" alt="Alexia">
+        <img src="foto2.jpg" alt="Alexia">
+        <img src="foto3.jpg" alt="Alexia">
+        <img src="foto4.jpg" alt="Alexia">
+        <img src="foto5.jpg" alt="Alexia">
+        <img src="foto6.jpg" alt="Alexia">
+
+    </div>
+
+</section>
+
+
+<section class="mensaje">
+
+    <div class="titulo">
+
+        <div class="subtitulo">
+            Un mensaje de nuestra familia
+        </div>
+
+        <h2>Mensaje especial</h2>
+
+    </div>
+
+    <div class="mensaje-contenido">
+
+        <p>
+            ¡Muchas gracias por acompañarnos
+            en esta noche tan especial!
+        </p>
+
+        <p>
+            Contar con su presencia, su tiempo
+            y el enorme cariño que siempre le han
+            demostrado a nuestra hija y a nuestra
+            familia hace que esta celebración de
+            sus 15 años sea aún más inolvidable.
+        </p>
+
+        <p>
+            Su compañía es el mejor regalo
+            que podíamos recibir.
+        </p>
+
+        <p>
+            ¡Gracias de corazón por compartir
+            esta alegría con nosotros!
+        </p>
+
+        <div class="firma">
+            Tania de Hernández
+        </div>
+
+        <p>
+            7631-0646
+        </p>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <h2>
+        Gracias por ser parte
+        de esta historia
+    </h2>
+
+    <p>
+        Alexia · Mis XV Años
+    </p>
+
+</footer>
+
+</main>
+
+</body>
+</html>
